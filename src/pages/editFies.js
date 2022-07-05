@@ -34,7 +34,7 @@ const EditFiles = () => {
     async function getData () {
       
       try {
-        let response = await axios.get('http://localhost:4000/api/info/archivo/'+admin_id);
+        let response = await axios.get('https://docor-api.herokuapp.com/api/info/archivo/'+admin_id);
         console.log(response.data);
         setData(response.data);
       } catch (err) {
@@ -53,7 +53,7 @@ const EditFiles = () => {
     await setData([...data]);
 
     try {
-      await axios.delete('http://localhost:4000/api/info/archivo/'+id);
+      await axios.delete('https://docor-api.herokuapp.com/api/info/archivo/'+id);
     } catch (err) {
       console.log(err.response.data.message);
     } finally {
@@ -69,7 +69,7 @@ const EditFiles = () => {
         console.log(tipo + ": "+ title1);
         await setData([...data, {"titulo":title1}]);
         try {
-          await axios.post('http://localhost:4000/api/info/archivo2/'+admin_id, {
+          await axios.post('https://docor-api.herokuapp.com/api/info/archivo2/'+admin_id, {
             titulo : title1
           });
         } catch (err) {
@@ -90,7 +90,7 @@ const EditFiles = () => {
         try {
           let response = await axios({
             method: "post",
-            url: 'http://localhost:4000/api/info/archivo/'+admin_id,
+            url: 'https://docor-api.herokuapp.com/api/info/archivo/'+admin_id,
             data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" },
           });
@@ -111,7 +111,7 @@ const EditFiles = () => {
         console.log(tipo + ": "+ title5);
         await setData([...data, {"descripcion": title5}]);
         try {
-          await axios.post('http://localhost:4000/api/info/archivo2/'+admin_id, {
+          await axios.post('https://docor-api.herokuapp.com/api/info/archivo2/'+admin_id, {
             descripcion : title5
           });
         } catch (err) {

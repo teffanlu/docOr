@@ -26,7 +26,7 @@ const EditDocumentation = () => {
     async function getData () {
 
       try {
-        let response = await axios.get('http://localhost:4000/api/info/documentacion/'+admin_id);
+        let response = await axios.get('https://docor-api.herokuapp.com/api/info/documentacion/'+admin_id);
         console.log(response.data);
 
         setData(response.data);
@@ -45,7 +45,7 @@ const EditDocumentation = () => {
   async function eliminar (i, id_doc) {
 
       try {
-        await axios.delete('http://localhost:4000/api/info/documentacion/'+id_doc);
+        await axios.delete('https://docor-api.herokuapp.com/api/info/documentacion/'+id_doc);
 
         data.splice(i, 1);
         await setData([...data]);
@@ -159,7 +159,7 @@ const EditDocumentation = () => {
   async function SaveCambio() {
     
     try {
-      let response = await axios.post('http://localhost:4000/api/info/documentacion/'+admin_id, {
+      let response = await axios.post('https://docor-api.herokuapp.com/api/info/documentacion/'+admin_id, {
         newData
       });
 

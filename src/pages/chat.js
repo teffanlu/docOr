@@ -34,7 +34,7 @@ function Chat() {
     async function getData () {
 
       try {
-        let response = await axios.get('http://localhost:4000/api/users/'+admin_id);
+        let response = await axios.get('https://docor-api.herokuapp.com/api/users/'+admin_id);
         console.log(response.data);
         setList(response.data);
       } catch (err) {
@@ -50,7 +50,7 @@ function Chat() {
     async function getMen () {
 
       try {
-        let response = await axios.get('http://localhost:4000/api/info/mensaje/'+admin_id);
+        let response = await axios.get('https://docor-api.herokuapp.com/api/info/mensaje/'+admin_id);
         console.log(response.data);
         setdata(response.data);
       } catch (err) {
@@ -77,7 +77,7 @@ function Chat() {
       var message = {nombre: User.nombre, mensaje: Message, time, date, admin_id: User.admin_id };
 
       try {
-        let response = await axios.post('http://localhost:4000/api/info/mensaje/'+admin_id, message);
+        let response = await axios.post('https://docor-api.herokuapp.com/api/info/mensaje/'+admin_id, message);
         console.log(response.data);
       } catch (err) {
         console.log(err.response.data.message); 
@@ -100,7 +100,7 @@ function Chat() {
 
   async function deleteEmpleado (id) {
     try {
-      await axios.delete('http://localhost:4000/api/users/empleado/'+id);
+      await axios.delete('https://docor-api.herokuapp.com/api/users/empleado/'+id);
     } catch (err) {
       console.log(err.response.data.message); 
       alert("Error");

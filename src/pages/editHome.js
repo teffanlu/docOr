@@ -21,7 +21,7 @@ function EditHome() {
 
     async function getData(){
       try {
-        let res = await axios.get('http://localhost:4000/api/info/'+empresa_id);
+        let res = await axios.get('https://docor-api.herokuapp.com/api/info/'+empresa_id);
         console.log(res.data[0]);
 
         if(res.data.length > 0){
@@ -51,7 +51,7 @@ function EditHome() {
     setControl(!control);
 
     try {
-      let response = await axios.post('http://localhost:4000/api/info/'+empresa_id, {
+      let response = await axios.post('https://docor-api.herokuapp.com/api/info/'+empresa_id, {
         title, 
         descripcion, 
         contacto

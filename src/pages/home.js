@@ -15,7 +15,7 @@ function Home() {
 
     async function getData(){
       try { 
-        let res = await axios.get('http://localhost:4000/api/info/'+empresa_id);
+        let res = await axios.get('https://docor-api.herokuapp.com/api/info/'+empresa_id);
         console.log(res.data[0]);
 
         if(res.data.length > 0){

@@ -15,7 +15,7 @@ function Register() {
     if(name !== "" & email !== ""){
       console.log("si entro!");
       try {
-        let res = await axios.post('http://localhost:4000/api/users/comprobName', {
+        let res = await axios.post('https://docor-api.herokuapp.com/api/users/comprobName', {
         nombre : name
         });
         console.log(res.data);
@@ -26,7 +26,7 @@ function Register() {
 
           var clave = Math.trunc(Math.random() * (999999 - 100000) + 100000);
 
-          let response = await axios.post('http://localhost:4000/api/users/admin', {
+          let response = await axios.post('https://docor-api.herokuapp.com/api/users/admin', {
           nombre : name,
           email,
           clave,

@@ -18,7 +18,7 @@ function Login() {
       setConfirm(false);
       console.log("si entro!");
       try {
-        let res = await axios.post('http://localhost:4000/api/users/comprobName', {
+        let res = await axios.post('https://docor-api.herokuapp.com/api/users/comprobName', {
         nombre : nick
         });
 

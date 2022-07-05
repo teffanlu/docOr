@@ -25,7 +25,7 @@ const Files = () => {
     async function getData () {
       
       try {
-        let response = await axios.get('http://localhost:4000/api/info/archivo/'+admin_id);
+        let response = await axios.get('https://docor-api.herokuapp.com/api/info/archivo/'+admin_id);
         console.log(response.data);
         setData(response.data);
       } catch (err) {

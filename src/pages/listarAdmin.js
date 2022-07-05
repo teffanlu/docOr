@@ -14,7 +14,7 @@ function ListarAdmin() {
   useEffect(() => {
     async function getData(){
       try {
-        let res = await axios.get('http://localhost:4000/api/users/admins/'+ empresa_id);
+        let res = await axios.get('https://docor-api.herokuapp.com/api/users/admins/'+ empresa_id);
         console.log(res.data);
 
         if(res.data.length > 0){
