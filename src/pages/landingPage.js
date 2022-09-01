@@ -19,27 +19,29 @@ function LandingPage() {
       <div>
         {/* about */}
         <div className='about padinT'>
-          <h1 className='text-center'>About</h1>
+          <h1 className='text-center'>Bienvenido a DocOr</h1>
           <figure className="text-center">
             <blockquote className="blockquote">
-              <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p className="mb-0">Plataforma dedicada para ambientes de trabajo en equipo. Organiza y documenta los trabajos de una forma ligera y accesible.</p>
             
             </blockquote>
+            {/*
             <figcaption className="blockquote-footer">
               Someone famous in <cite title="Source Title">Source Title</cite>
             </figcaption>
+            */}
           </figure>
         </div>
         {/* info */}
         <div className='info'>
-          <h1 className='text-center'>Info</h1>
+          <h1 className='text-center'>Información</h1>
           <figure className="text-center">
             <blockquote className="blockquote">
-              <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p className="mb-0">Creado y dirigido por un único administrador, autorizado por la empresa en función.</p>
             
             </blockquote>
             <figcaption className="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
+              Inicie sesión para comenzar las labores dentro del equipo asignado
             </figcaption>
           </figure>
         </div>
@@ -48,11 +50,11 @@ function LandingPage() {
           <h1 className='text-center'>Contacto</h1>
           <figure className="text-center">
             <blockquote className="blockquote">
-              <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <p className="mb-0">Gmail: organizeddoc@gmail.com</p>
             
             </blockquote>
             <figcaption className="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
+              Creadora: <cite title="Source Title"> Teffany Paola Luzardo Añez </cite>
             </figcaption>
           </figure>
         </div>

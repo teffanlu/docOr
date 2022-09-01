@@ -93,7 +93,7 @@ function Login() {
             null
           }
           <input type="password" placeholder="Clave" onChange={(e)=> setClave(e.target.value)}/>
-          <button onClick={()=> doLogin()}>Inicar</button>
+          <button onClick={()=> doLogin()}>Iniciar</button>
         </div>
       </div>
     </div></div>
